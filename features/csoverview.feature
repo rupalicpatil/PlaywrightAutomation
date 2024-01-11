@@ -42,43 +42,10 @@ Feature: ComplianSeer Overview
         When I am on Overview tab
         Then Total Complaints count should be sum of Open, In Progress and Closed Complaints status count as per availability of records
 
-    
-    Scenario: Validate Trailing keyword on Overview tab
+        Scenario: Validate Trailing keyword on Overview tab
         Given I am on the ComplianSeer Overview page
         When I am on Overview tab
         Then I should able to see T1M, T3M and T6M under Transaction Monitoring panel on overview tab
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     Scenario: Verify the Alerts status count should be clickable 
@@ -202,4 +169,26 @@ Feature: ComplianSeer Overview
         Then I should navigate to ComplianSeer Complaints page 
         And I should able to click on back button to navigate to ComplianSeer Overview page
 
-    Scenario: Verify pie-chart Complaints statuses should be clickable
+    
+    Scenario: Verify user should able to click on Alert/User Metrics tab
+        Given I am on the ComplianSeer Overview page
+        And I am on Overview tab
+        When I click on Alert/User Metrics tab
+        Then I should able to navigate to Alert/User Metrics tab
+    
+    Scenario: Verify user should able to click on Alerts trending tab
+        Given I am on the ComplianSeer Overview page
+        And I am on Overview tab
+        When I click on Alerts trending tab
+        Then I should able to navigate to Alerts trending tab
+    
+    Scenario: Verify user should able to click on Overview tab
+        Given I am on the ComplianSeer Overview page
+        And I am on Alerts trending tab
+        When I click on Overview tab
+        Then I should able to navigate to Overview tab
+
+    Scenario: Validate Reset Filter and Download Data button on "Alert Metrics, Assigned User Analyst for Alerts, Escalated User Analyst for Alerts, Assigned User Analyst for cases and Escalated User Analyst for cases table"
+        Given I am on the ComplianSeer Overview page
+        When I am on Alert/User Metrics tab
+        Then I should able to see Reset filter and Download data button for all above mentioned tables
