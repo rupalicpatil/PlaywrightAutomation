@@ -175,6 +175,7 @@ Feature: ComplianSeer Overview
         And I am on Overview tab
         When I click on Alert/User Metrics tab
         Then I should able to navigate to Alert/User Metrics tab
+        And I should able to see table names Alert Metrics, Assigned User Analyst for Alerts, Escalated User Analyst for Alerts, Assigned User Analyst for cases and Escalated User Analyst for cases
     
     Scenario: Verify user should able to click on Alerts trending tab
         Given I am on the ComplianSeer Overview page
@@ -192,3 +193,6 @@ Feature: ComplianSeer Overview
         Given I am on the ComplianSeer Overview page
         When I am on Alert/User Metrics tab
         Then I should able to see Reset filter and Download data button for all above mentioned tables
+
+
+    
